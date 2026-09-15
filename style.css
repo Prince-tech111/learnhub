@@ -1,198 +1,158 @@
 /* =========================================
-   LEARNHUB
-   Educational Course Platform
+   LEARNHUB - ADJUSTED DARK THEME
+   Based on Commit 3 sizing
    ========================================= */
 
 
 /* =========================================
-   1. RESET
+   GLOBAL
    ========================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-html {
-    scroll-behavior: smooth;
-}
-
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #172033;
-    background-color: #ffffff;
+    background: #171717;
+    color: #e7e5e4;
 }
-
-
-/* =========================================
-   2. GLOBAL ELEMENTS
-   ========================================= */
-
-img {
-    display: block;
-    width: 100%;
-}
-
-
-a {
-    color: inherit;
-}
-
-
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
-}
-
 
 .container {
     width: min(1120px, 90%);
     margin-inline: auto;
 }
 
-
 .section {
     padding: 90px 0;
 }
 
 
-.eyebrow {
-    margin-bottom: 12px;
-    color: #2563eb;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-
-.section-heading {
-    max-width: 700px;
-    margin-bottom: 45px;
-}
-
-
-.section-heading h2 {
-    margin-bottom: 15px;
-    font-size: 2.4rem;
-    line-height: 1.2;
-}
-
-
-.section-heading p:last-child {
-    color: #64748b;
-    font-size: 1.05rem;
-}
-
-
 /* =========================================
-   3. HEADER
+   HEADER
    ========================================= */
 
 .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
-}
 
+    background: #0d0d0d;
+    border-bottom: 1px solid #333333;
+}
 
 .header-container {
     min-height: 75px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 30px;
 }
 
-
 .logo {
-    color: #172033;
+    color: #f5f5f4;
     font-size: 1.6rem;
     font-weight: 800;
     text-decoration: none;
 }
 
-
 .logo span {
-    color: #2563eb;
+    color: #a3a3a3;
 }
-
 
 .main-navigation ul {
     display: flex;
     align-items: center;
     gap: 28px;
+
     list-style: none;
 }
 
-
 .main-navigation a {
-    color: #475569;
+    color: #d6d3d1;
     font-size: 0.95rem;
     font-weight: 600;
+
     text-decoration: none;
+
     transition: color 0.25s ease;
 }
 
-
 .main-navigation a:hover,
 .main-navigation a:focus-visible {
-    color: #2563eb;
+    color: #ffffff;
 }
 
 
 /* =========================================
-   4. HERO
+   HERO
    ========================================= */
 
 .hero {
+    position: relative;
+    overflow: hidden;
+
     min-height: 620px;
+
     display: flex;
     align-items: center;
+
     background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(115, 115, 115, 0.15),
+            transparent 25%
+        ),
         linear-gradient(
             135deg,
-            #eff6ff 0%,
-            #ffffff 55%,
-            #f8fafc 100%
+            #111111 0%,
+            #292929 48%,
+            #171717 100%
         );
 }
-
 
 .hero-container {
     display: flex;
     align-items: center;
 }
 
-
 .hero-content {
     max-width: 760px;
+    position: relative;
+    z-index: 3;
 }
 
+.eyebrow {
+    margin-bottom: 12px;
+
+    color: #b5b5b5;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
 
 .hero h1 {
     max-width: 750px;
+
     margin-bottom: 22px;
-    color: #111827;
+
+    color: #f5f5f4;
+
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 1.05;
+
     letter-spacing: -2px;
 }
 
-
 .hero-description {
     max-width: 650px;
+
     margin-bottom: 32px;
-    color: #64748b;
+
+    color: #b8b8b8;
+
     font-size: 1.15rem;
 }
-
 
 .hero-actions {
     display: flex;
@@ -202,298 +162,734 @@ a {
 
 
 /* =========================================
-   5. BUTTONS
+   FLOATING AI WEB
+   ========================================= */
+
+.hero::before {
+    content: "AI";
+
+    position: absolute;
+
+    top: 65px;
+    right: 7%;
+
+    width: 150px;
+    height: 150px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.12) 2px,
+            transparent 3px
+        );
+
+    background-size: 22px 22px;
+
+    box-shadow:
+        0 0 30px rgba(255, 255, 255, 0.08),
+        inset 0 0 30px rgba(255, 255, 255, 0.06);
+
+    animation: floatingAI 5s ease-in-out infinite;
+
+    z-index: 1;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    top: 35px;
+    right: 3%;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            35deg,
+            transparent 48%,
+            rgba(255, 255, 255, 0.12) 49%,
+            transparent 51%
+        ),
+        linear-gradient(
+            145deg,
+            transparent 48%,
+            rgba(255, 255, 255, 0.12) 49%,
+            transparent 51%
+        ),
+        linear-gradient(
+            90deg,
+            transparent 48%,
+            rgba(255, 255, 255, 0.08) 49%,
+            transparent 51%
+        );
+
+    animation: aiWeb 8s linear infinite;
+
+    pointer-events: none;
+}
+
+@keyframes floatingAI {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(4deg);
+    }
+}
+
+@keyframes aiWeb {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   BUTTONS
    ========================================= */
 
 .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     min-height: 48px;
+
     padding: 12px 22px;
+
     border-radius: 8px;
+
     font-weight: 700;
     text-decoration: none;
+
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
         background-color 0.2s ease;
 }
 
-
 .button:hover {
     transform: translateY(-2px);
 }
 
-
 .button-primary {
-    color: #ffffff;
-    background-color: #2563eb;
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
-}
+    color: #111111;
+    background: #e5e5e5;
 
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.3);
+}
 
 .button-primary:hover {
-    background-color: #1d4ed8;
+    background: #ffffff;
 }
-
 
 .button-secondary {
-    color: #1e293b;
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
-}
+    color: #eeeeee;
 
+    background: transparent;
+
+    border: 1px solid #666666;
+}
 
 .button-secondary:hover {
-    border-color: #2563eb;
-}
-
-
-.button-light {
-    color: #1d4ed8;
-    background-color: #ffffff;
-}
-
-
-.button-light:hover {
-    background-color: #eff6ff;
+    background: #2a2a2a;
+    border-color: #999999;
 }
 
 
 /* =========================================
-   6. COURSES
+   COURSES
    ========================================= */
 
 .courses {
-    background-color: #ffffff;
+    background:
+        linear-gradient(
+            180deg,
+            #191919,
+            #111111
+        );
 }
 
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    margin-bottom: 15px;
+
+    color: #f5f5f4;
+
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+.section-heading p:last-child {
+    color: #a8a8a8;
+    font-size: 1.05rem;
+}
 
 .course-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 28px;
 }
 
-
 .course-card {
     overflow: hidden;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+
+    background: #242424;
+
+    border: 1px solid #3b3b3b;
     border-radius: 14px;
-    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.35);
+
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
 }
 
-
 .course-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
-}
 
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.5);
+}
 
 .course-image {
     overflow: hidden;
-}
 
+    background: #303030;
+}
 
 .course-image img {
+    width: 100%;
     height: 220px;
+
     object-fit: cover;
+
     transition: transform 0.4s ease;
 }
-
 
 .course-card:hover .course-image img {
     transform: scale(1.04);
 }
 
-
 .course-content {
     padding: 25px;
 }
 
-
 .course-category {
     display: inline-block;
+
     margin-bottom: 10px;
-    color: #2563eb;
+
+    color: #bdbdbd;
+
     font-size: 0.78rem;
     font-weight: 700;
+
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
 
-
 .course-content h3 {
     margin-bottom: 12px;
+
+    color: #f5f5f4;
+
     font-size: 1.35rem;
 }
 
-
 .course-content p {
     margin-bottom: 20px;
-    color: #64748b;
+
+    color: #b8b8b8;
 }
 
-
 .course-link {
-    color: #2563eb;
+    color: #e5e5e5;
+
     font-weight: 700;
+
     text-decoration: none;
 }
 
-
 .course-link:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
 
 /* =========================================
-   7. RESOURCES
+   RESOURCES
    ========================================= */
 
 .resources {
-    background-color: #f8fafc;
+    background: #202020;
 }
-
 
 .resource-list {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
 }
 
-
 .resource-item {
     padding: 30px;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+
+    background: #292929;
+
+    border: 1px solid #414141;
     border-radius: 12px;
 }
-
 
 .resource-icon {
     width: 55px;
     height: 55px;
+
     display: grid;
     place-items: center;
+
     margin-bottom: 20px;
+
     border-radius: 12px;
-    background-color: #eff6ff;
+
+    background: #353535;
+
     font-size: 1.5rem;
 }
 
-
 .resource-item h3 {
     margin-bottom: 10px;
+
+    color: #f5f5f4;
 }
 
-
 .resource-item p {
-    color: #64748b;
+    color: #b8b8b8;
 }
 
 
 /* =========================================
-   8. ENROLLMENT
+   ENROLLMENT - MOSS BLACK
    ========================================= */
 
 .enrollment {
-    background-color: #2563eb;
+    background: #151a16;
 }
-
 
 .enrollment-card {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
     gap: 40px;
+
     padding: 55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #182019,
+            #0e120f
+        );
+
+    border: 1px solid #354238;
     border-radius: 18px;
-    background-color: #1d4ed8;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+
     color: #ffffff;
 }
 
-
 .enrollment-card .eyebrow {
-    color: #bfdbfe;
+    color: #a8b5a8;
 }
-
 
 .enrollment-card h2 {
     max-width: 650px;
+
     margin-bottom: 15px;
+
+    color: #f2f4f2;
+
     font-size: 2.3rem;
     line-height: 1.2;
 }
 
-
 .enrollment-card p {
     max-width: 650px;
-    color: #dbeafe;
+
+    color: #bbc3bc;
+}
+
+.button-light {
+    color: #172018;
+
+    background: #d8ded8;
+}
+
+.button-light:hover {
+    background: #ffffff;
 }
 
 
 /* =========================================
-   9. CONTACT
+   CONTACT - FLINT
    ========================================= */
 
 .contact {
-    background-color: #ffffff;
+    background:
+        linear-gradient(
+            135deg,
+            #4a4a48,
+            #5a5955
+        );
+
+    color: #f5f5f4;
 }
 
+.contact .eyebrow {
+    color: #d5d4d0;
+}
+
+.contact .section-heading h2 {
+    color: #ffffff;
+}
+
+.contact .section-heading p:last-child {
+    color: #deddd8;
+}
 
 .contact-information {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 30px;
 }
 
-
 .contact-information p {
-    color: #475569;
+    color: #eeeeea;
 }
 
-
 .contact-information a {
-    color: #2563eb;
+    color: #ffffff;
+
     font-weight: 600;
+}
+
+.contact-information a:hover {
+    color: #d6d5d0;
 }
 
 
 /* =========================================
-   10. FOOTER
+   FOOTER
    ========================================= */
 
 .site-footer {
     padding: 40px 0;
-    background-color: #0f172a;
-    color: #cbd5e1;
-}
 
+    background: #080808;
+
+    color: #a8a8a8;
+
+    border-top: 1px solid #333333;
+}
 
 .footer-container {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
     gap: 30px;
 }
-
 
 .site-footer .logo {
     color: #ffffff;
 }
 
+.site-footer .logo span {
+    color: #a3a3a3;
+}
 
 .site-footer p {
     margin-top: 8px;
 }
 
-
 .copyright {
     font-size: 0.9rem;
+}
+
+.back-to-top {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #c8c8c8;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+a:focus-visible {
+    outline: 3px solid #d6d3d1;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+::selection {
+    background: #737373;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .header-container {
+        min-height: auto;
+
+        padding: 18px 0;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .main-navigation ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px 22px;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 100px 0;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resource-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .enrollment-card {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 40px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(92%, 1120px);
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .header-container {
+        align-items: flex-start;
+    }
+
+    .main-navigation {
+        width: 100%;
+    }
+
+    .main-navigation ul {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        gap: 10px 18px;
+    }
+
+    .main-navigation a {
+        font-size: 0.88rem;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+
+    .course-grid,
+    .resource-list {
+        grid-template-columns: 1fr;
+    }
+
+    .course-image img {
+        height: 210px;
+    }
+
+    .enrollment-card {
+        padding: 30px 25px;
+    }
+
+    .enrollment-card h2 {
+        font-size: 1.9rem;
+    }
+
+    .enrollment-card .button {
+        width: 100%;
+    }
+
+    .contact-information {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    /* Smaller AI decoration on phones */
+
+    .hero::before {
+        width: 95px;
+        height: 95px;
+
+        top: 35px;
+        right: 5%;
+
+        font-size: 1.5rem;
+    }
+
+    .hero::after {
+        width: 145px;
+        height: 145px;
+
+        top: 15px;
+        right: -5%;
+    }
+
+    .hero-content {
+        position: relative;
+
+        z-index: 2;
+    }
+
+    .site-footer {
+        text-align: center;
+    }
+
+    .footer-container {
+        align-items: center;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
