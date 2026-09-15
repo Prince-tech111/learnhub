@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
@@ -7,26 +8,28 @@
 
     <meta
         name="description"
-        content="LearnHub is an educational course platform offering online lessons, learning resources, and enrollment information."
+        content="LearnHub is an educational course platform providing online courses, learning resources, and enrollment information for students."
     >
 
-    <title>LearnHub | Educational Course Platform</title>
+    <title>LearnHub | Learn. Grow. Succeed.</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header -->
+    <!-- ==============================
+         HEADER
+    =============================== -->
     <header class="site-header">
 
-        <div class="container">
+        <div class="container header-container">
 
-            <a href="#" class="logo">
-                LearnHub
+            <a href="#home" class="logo" aria-label="LearnHub home">
+                Learn<span>Hub</span>
             </a>
 
-            <nav class="main-navigation" aria-label="Main navigation">
+            <nav class="main-navigation" aria-label="Primary navigation">
 
                 <ul>
                     <li>
@@ -57,13 +60,15 @@
     </header>
 
 
-    <!-- Main Content -->
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
     <main>
 
-        <!-- Hero Section -->
+        <!-- HERO -->
         <section id="home" class="hero">
 
-            <div class="container">
+            <div class="container hero-container">
 
                 <div class="hero-content">
 
@@ -75,15 +80,23 @@
                         Build Your Future Through Learning
                     </h1>
 
-                    <p>
-                        LearnHub is an educational platform designed to
-                        help students develop valuable academic,
-                        technical, and professional skills.
+                    <p class="hero-description">
+                        LearnHub provides students with accessible
+                        courses, useful learning resources, and
+                        opportunities to develop skills for the future.
                     </p>
 
-                    <a href="#courses" class="button">
-                        Explore Courses
-                    </a>
+                    <div class="hero-actions">
+
+                        <a href="#courses" class="button button-primary">
+                            Explore Courses
+                        </a>
+
+                        <a href="#enrollment" class="button button-secondary">
+                            How to Enroll
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -92,8 +105,8 @@
         </section>
 
 
-        <!-- Courses Section -->
-        <section id="courses" class="courses">
+        <!-- COURSES -->
+        <section id="courses" class="courses section">
 
             <div class="container">
 
@@ -108,8 +121,8 @@
                     </h2>
 
                     <p>
-                        Choose from a variety of courses designed
-                        to support your academic and professional growth.
+                        Develop practical knowledge and valuable skills
+                        through our student-focused courses.
                     </p>
 
                 </div>
@@ -121,10 +134,13 @@
                     <article class="course-card">
 
                         <div class="course-image">
+
                             <img
                                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
-                                alt="Laptop displaying programming code"
+                                alt="Laptop showing programming code"
+                                loading="lazy"
                             >
+
                         </div>
 
                         <div class="course-content">
@@ -138,12 +154,12 @@
                             </h3>
 
                             <p>
-                                Learn the fundamentals of HTML,
-                                CSS, and modern web development.
+                                Learn HTML, CSS, responsive design,
+                                and the fundamentals of creating websites.
                             </p>
 
                             <a href="#enrollment" class="course-link">
-                                Enroll Now →
+                                Enroll Now <span aria-hidden="true">→</span>
                             </a>
 
                         </div>
@@ -155,10 +171,13 @@
                     <article class="course-card">
 
                         <div class="course-image">
+
                             <img
                                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-                                alt="Data analytics dashboard on a computer"
+                                alt="Data analytics dashboard"
+                                loading="lazy"
                             >
+
                         </div>
 
                         <div class="course-content">
@@ -172,12 +191,12 @@
                             </h3>
 
                             <p>
-                                Discover data analysis,
-                                visualization, and problem-solving techniques.
+                                Explore data analysis, visualization,
+                                statistics, and problem-solving techniques.
                             </p>
 
                             <a href="#enrollment" class="course-link">
-                                Enroll Now →
+                                Enroll Now <span aria-hidden="true">→</span>
                             </a>
 
                         </div>
@@ -189,10 +208,13 @@
                     <article class="course-card">
 
                         <div class="course-image">
+
                             <img
                                 src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
                                 alt="Students learning with laptops"
+                                loading="lazy"
                             >
+
                         </div>
 
                         <div class="course-content">
@@ -206,12 +228,125 @@
                             </h3>
 
                             <p>
-                                Develop essential computer and
-                                digital skills for modern education.
+                                Build essential computer and digital
+                                skills for modern education and work.
                             </p>
 
                             <a href="#enrollment" class="course-link">
-                                Enroll Now →
+                                Enroll Now <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Course 4: Artificial Intelligence -->
+                    <article class="course-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+                                alt="Artificial intelligence technology illustration"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Technology
+                            </span>
+
+                            <h3>
+                               Artificial Intelligence
+                            </h3>
+
+                            <p>
+                                Learn the fundamentals of artificial intelligence,
+                                machine learning, and how AI is transforming modern
+                                education, business, and technology.
+                            </p>
+
+                            <a href="#enrollment" class="course-link">
+                                Enroll Now <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Course 5: Software Engineering -->
+                    <article class="course-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                                alt="Software engineering code displayed on a computer"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Technology
+                            </span>
+
+                            <h3>
+                               Software Engineering
+                            </h3>
+
+                            <p>
+                                Develop practical software engineering skills,
+                                including programming, software design, testing,
+                                Git, and modern development practices.
+                            </p>
+
+                            <a href="#enrollment" class="course-link">
+                                Enroll Now <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Course 6: Cyber Security -->
+                    <article class="course-card">
+
+                       <div class="course-image">
+
+                           <img
+                               src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80"
+                               alt="Cyber security concept showing digital security technology"
+                               loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="course-content">
+
+                            <span class="course-category">
+                                Technology
+                            </span>
+
+                            <h3>
+                               Cyber Security
+                            </h3>
+
+                            <p>
+                                Learn the fundamentals of cyber security, online safety,
+                                network protection, data security, and practical methods
+                                for protecting digital systems and information.
+                            </p>
+
+                            <a href="#enrollment" class="course-link">
+                                Enroll Now <span aria-hidden="true">→</span>
                             </a>
 
                         </div>
@@ -225,8 +360,8 @@
         </section>
 
 
-        <!-- Resources Section -->
-        <section id="resources" class="resources">
+        <!-- RESOURCES -->
+        <section id="resources" class="resources section">
 
             <div class="container">
 
@@ -237,12 +372,12 @@
                     </p>
 
                     <h2>
-                        Resources For Students
+                        Everything You Need to Learn
                     </h2>
 
                     <p>
-                        Access useful materials that can support
-                        your learning journey.
+                        Access materials designed to make studying
+                        easier and more effective.
                     </p>
 
                 </div>
@@ -250,34 +385,58 @@
 
                 <div class="resource-list">
 
-                    <div class="resource-item">
-                        <h3>Course Notes</h3>
+                    <article class="resource-item">
+
+                        <div class="resource-icon" aria-hidden="true">
+                            📚
+                        </div>
+
+                        <h3>
+                            Course Notes
+                        </h3>
 
                         <p>
-                            Review lesson notes and important
-                            concepts from your courses.
+                            Review important concepts and lesson
+                            notes from your courses.
                         </p>
-                    </div>
+
+                    </article>
 
 
-                    <div class="resource-item">
-                        <h3>Study Guides</h3>
+                    <article class="resource-item">
+
+                        <div class="resource-icon" aria-hidden="true">
+                            📝
+                        </div>
+
+                        <h3>
+                            Study Guides
+                        </h3>
 
                         <p>
-                            Use structured study guides to
-                            prepare for tests and examinations.
+                            Use structured guides to prepare for
+                            tests, assignments, and examinations.
                         </p>
-                    </div>
+
+                    </article>
 
 
-                    <div class="resource-item">
-                        <h3>Practice Exercises</h3>
+                    <article class="resource-item">
+
+                        <div class="resource-icon" aria-hidden="true">
+                            🎯
+                        </div>
+
+                        <h3>
+                            Practice Exercises
+                        </h3>
 
                         <p>
-                            Improve your understanding through
+                            Strengthen your understanding through
                             practical learning exercises.
                         </p>
-                    </div>
+
+                    </article>
 
                 </div>
 
@@ -286,27 +445,31 @@
         </section>
 
 
-        <!-- Enrollment Section -->
-        <section id="enrollment" class="enrollment">
+        <!-- ENROLLMENT -->
+        <section id="enrollment" class="enrollment section">
 
             <div class="container">
 
-                <div class="enrollment-content">
+                <div class="enrollment-card">
 
-                    <p class="eyebrow">
-                        Start Learning
-                    </p>
+                    <div>
 
-                    <h2>
-                        Ready to Begin Your Learning Journey?
-                    </h2>
+                        <p class="eyebrow">
+                            Start Learning
+                        </p>
 
-                    <p>
-                        Select a course and begin developing
-                        the knowledge and skills you need for the future.
-                    </p>
+                        <h2>
+                            Ready to Begin Your Learning Journey?
+                        </h2>
 
-                    <a href="#contact" class="button">
+                        <p>
+                            Choose a course and take the next step
+                            toward developing your knowledge and skills.
+                        </p>
+
+                    </div>
+
+                    <a href="#contact" class="button button-light">
                         Get Enrollment Information
                     </a>
 
@@ -317,8 +480,8 @@
         </section>
 
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
+        <!-- CONTACT -->
+        <section id="contact" class="contact section">
 
             <div class="container">
 
@@ -339,12 +502,21 @@
 
                 </div>
 
-                <p>
-                    Email:
-                    <a href="mailto:info@learnhub.example">
-                        info@learnhub.example
-                    </a>
-                </p>
+                <div class="contact-information">
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:info@learnhub.example">
+                            info@learnhub.example
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Learning Hours:</strong>
+                        Monday – Friday, 9:00 AM – 5:00 PM
+                    </p>
+
+                </div>
 
             </div>
 
@@ -353,12 +525,26 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- ==============================
+         FOOTER
+    =============================== -->
     <footer class="site-footer">
 
-        <div class="container">
+        <div class="container footer-container">
 
-            <p>
+            <div>
+
+                <a href="#home" class="logo">
+                    Learn<span>Hub</span>
+                </a>
+
+                <p>
+                    Empowering students through accessible education.
+                </p>
+
+            </div>
+
+            <p class="copyright">
                 &copy; 2026 LearnHub. All rights reserved.
             </p>
 
@@ -367,4 +553,5 @@
     </footer>
 
 </body>
+
 </html>
