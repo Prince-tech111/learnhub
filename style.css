@@ -1054,3 +1054,103 @@ a:focus-visible {
     }
 
 }
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+
+/* Visible keyboard focus */
+
+a:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+
+/* Improve text selection */
+
+::selection {
+    background-color: #bfdbfe;
+    color: #172033;
+}
+
+
+/* Respect users who prefer reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+
+/* Improve image loading appearance */
+
+.course-image {
+    background-color: #e2e8f0;
+}
+
+
+/* Prevent awkward text overflow */
+
+h1,
+h2,
+h3,
+p {
+    overflow-wrap: break-word;
+}
+
+
+/* Improve clickable links */
+
+.course-link,
+.main-navigation a,
+.contact-information a {
+    text-underline-offset: 4px;
+}
+
+
+/* Improve small-screen footer spacing */
+
+@media (max-width: 600px) {
+
+    .site-footer {
+        text-align: center;
+    }
+
+
+    .footer-container {
+        align-items: center;
+    }
+
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 25px;
+    color: #bfdbfe;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+    color: #ffffff;
+    text-decoration: underline;
+}
