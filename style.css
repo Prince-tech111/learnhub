@@ -9,8 +9,8 @@
    ========================================= */
 
 body {
-    background: #171717;
-    color: #e7e5e4;
+    background: #090607;
+    color: #020201;
 }
 
 .container {
@@ -81,189 +81,755 @@ body {
 }
 
 
-/* =========================================
-   HERO
-   ========================================= */
+
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero {
-    position: relative;
-    overflow: hidden;
+    min-height: 520px;
+    width: 100%;
 
-    min-height: 620px;
-
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
+
+    padding: 55px 70px;
 
     background:
         radial-gradient(
-            circle at 85% 15%,
-            rgba(115, 115, 115, 0.15),
-            transparent 25%
+            circle at 25% 50%,
+            rgba(0, 145, 190, 0.08),
+            transparent 35%
         ),
         linear-gradient(
             135deg,
-            #111111 0%,
-            #292929 48%,
-            #171717 100%
+            #276370,
+            #171717 60%,
+            #101010
         );
+
+    overflow: hidden;
 }
 
-.hero-container {
+
+/* =========================
+   LEFT AI GRAPHIC
+========================= */
+
+.hero-ai {
     display: flex;
+    justify-content: center;
     align-items: center;
-}
 
-.hero-content {
-    max-width: 760px;
+    min-height: 420px;
+
     position: relative;
-    z-index: 3;
-}
-
-.eyebrow {
-    margin-bottom: 12px;
-
-    color: #b5b5b5;
-
-    font-size: 0.82rem;
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-.hero h1 {
-    max-width: 750px;
-
-    margin-bottom: 22px;
-
-    color: #f5f5f4;
-
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-}
-
-.hero-description {
-    max-width: 650px;
-
-    margin-bottom: 32px;
-
-    color: #b8b8b8;
-
-    font-size: 1.15rem;
-}
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
 
-/* =========================================
-   FLOATING AI WEB
-   ========================================= */
+/* MAIN AI CIRCLE */
 
-.hero::before {
-    content: "AI";
+.ai-circle {
+    width: 340px;
+    height: 340px;
 
-    position: absolute;
-
-    top: 65px;
-    right: 7%;
-
-    width: 150px;
-    height: 150px;
-
-    display: grid;
-    place-items: center;
-
-    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 50%;
 
-    color: rgba(255, 255, 255, 0.75);
+    position: relative;
 
-    font-size: 2.4rem;
-    font-weight: 800;
-    letter-spacing: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background:
         radial-gradient(
             circle,
-            rgba(255, 255, 255, 0.12) 2px,
-            transparent 3px
+            rgba(0, 150, 220, 0.18),
+            rgba(0, 70, 110, 0.08) 45%,
+            transparent 70%
         );
 
-    background-size: 22px 22px;
+    border: 1px solid rgba(0, 190, 255, 0.55);
 
     box-shadow:
-        0 0 30px rgba(255, 255, 255, 0.08),
-        inset 0 0 30px rgba(255, 255, 255, 0.06);
-
-    animation: floatingAI 5s ease-in-out infinite;
-
-    z-index: 1;
+        0 0 25px rgba(0, 170, 255, 0.35),
+        0 0 70px rgba(0, 120, 200, 0.18),
+        inset 0 0 40px rgba(0, 170, 255, 0.12);
 }
 
-.hero::after {
-    content: "";
 
+/* =========================
+   AI RINGS
+========================= */
+
+.ai-ring {
     position: absolute;
-
-    top: 35px;
-    right: 3%;
-
-    width: 230px;
-    height: 230px;
 
     border-radius: 50%;
 
-    background:
-        linear-gradient(
-            35deg,
-            transparent 48%,
-            rgba(255, 255, 255, 0.12) 49%,
-            transparent 51%
-        ),
-        linear-gradient(
-            145deg,
-            transparent 48%,
-            rgba(255, 255, 255, 0.12) 49%,
-            transparent 51%
-        ),
-        linear-gradient(
-            90deg,
-            transparent 48%,
-            rgba(255, 255, 255, 0.08) 49%,
-            transparent 51%
-        );
-
-    animation: aiWeb 8s linear infinite;
-
-    pointer-events: none;
+    border: 1px solid rgba(0, 190, 255, 0.45);
 }
 
-@keyframes floatingAI {
+.ring-one {
+    width: 280px;
+    height: 280px;
+
+    transform: rotate(20deg);
+}
+
+.ring-two {
+    width: 225px;
+    height: 225px;
+
+    transform: rotate(-35deg);
+
+    border-style: dashed;
+}
+
+.ring-three {
+    width: 165px;
+    height: 165px;
+
+    transform: rotate(55deg);
+}
+
+
+/* =========================
+   NETWORK LINES
+========================= */
+
+.ai-line {
+    position: absolute;
+
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 200, 255, 0.8),
+        transparent
+    );
+
+    transform-origin: center;
+}
+
+.line-one {
+    width: 320px;
+    transform: rotate(25deg);
+}
+
+.line-two {
+    width: 320px;
+    transform: rotate(-25deg);
+}
+
+.line-three {
+    width: 300px;
+    transform: rotate(90deg);
+}
+
+
+/* =========================
+   AI DOTS
+========================= */
+
+.ai-dot {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #00c8ff;
+
+    box-shadow:
+        0 0 8px #00c8ff,
+        0 0 18px rgba(0, 200, 255, 0.8);
+}
+
+.dot-one {
+    top: 55px;
+    left: 105px;
+}
+
+.dot-two {
+    top: 95px;
+    right: 55px;
+}
+
+.dot-three {
+    bottom: 70px;
+    right: 85px;
+}
+
+.dot-four {
+    bottom: 85px;
+    left: 60px;
+}
+
+.dot-five {
+    top: 145px;
+    left: 38px;
+}
+
+
+/* =========================
+   AI CENTER
+========================= */
+
+.ai-core {
+    width: 82px;
+    height: 82px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #1bc9ff,
+            #087eae 55%,
+            #063b55
+        );
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+
+    box-shadow:
+        0 0 20px rgba(0, 190, 255, 0.8),
+        0 0 45px rgba(0, 160, 255, 0.4);
+}
+
+.ai-core span {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   RIGHT INTRO CONTENT
+========================= */
+
+.hero-content {
+    max-width: 520px;
+
+    padding-left: 30px;
+}
+
+.hero-content h1 {
+    margin: 0 0 22px;
+
+    font-size: clamp(48px, 5vw, 72px);
+
+    line-height: 0.96;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #f2f2f2;
+
+    letter-spacing: -2px;
+}
+
+.hero-content p {
+    max-width: 470px;
+
+    margin-bottom: 28px;
+
+    color: #bdbdbd;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 0 18px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.primary-btn {
+    background: #f1f1f1;
+
+    color: #151515;
+
+    border: 1px solid #f1f1f1;
+}
+
+.secondary-btn {
+    background: transparent;
+
+    color: #f1f1f1;
+
+    border: 1px solid #555;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.primary-btn:hover {
+    background: #ffffff;
+}
+
+.secondary-btn:hover {
+    border-color: #00bfff;
+
+    color: #00bfff;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 850px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 50px 25px 70px;
+    }
+
+    .hero-ai {
+        order: 1;
+
+        min-height: 360px;
+
+        margin-bottom: 20px;
+    }
+
+    .hero-content {
+        order: 2;
+
+        padding-left: 0;
+
+        margin: auto;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .ai-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .ring-one {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ring-two {
+        width: 200px;
+        height: 200px;
+    }
+
+    .ring-three {
+        width: 145px;
+        height: 145px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .hero-ai {
+        min-height: 310px;
+    }
+
+    .ai-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .ring-one {
+        width: 215px;
+        height: 215px;
+    }
+
+    .ring-two {
+        width: 175px;
+        height: 175px;
+    }
+
+    .ring-three {
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
+
+/* =========================================
+   AI CORE
+========================================= */
+
+.ai-core {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: #ffffff;
+
+    background: radial-gradient(
+        circle,
+        #00bfff,
+        #0066aa 55%,
+        #003c66
+    );
+
+    border: 2px solid rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 0 15px #00bfff,
+        0 0 35px rgba(0, 191, 255, 0.65),
+        0 0 70px rgba(0, 120, 255, 0.35);
+
+    z-index: 10;
+}
+
+/* =========================================
+   NETWORK NODES
+========================================= */
+
+.node {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #00c8ff;
+
+    box-shadow:
+        0 0 8px #00c8ff,
+        0 0 18px rgba(0, 200, 255, 0.8);
+
+    z-index: 5;
+}
+
+/* Node positions */
+
+.node-1 {
+    top: 15%;
+    left: 48%;
+}
+
+.node-2 {
+    top: 28%;
+    left: 20%;
+}
+
+.node-3 {
+    top: 38%;
+    left: 75%;
+}
+
+.node-4 {
+    top: 52%;
+    left: 13%;
+}
+
+.node-5 {
+    top: 65%;
+    left: 27%;
+}
+
+.node-6 {
+    top: 78%;
+    left: 51%;
+}
+
+.node-7 {
+    top: 63%;
+    left: 79%;
+}
+
+.node-8 {
+    top: 45%;
+    left: 55%;
+}
+
+.node-9 {
+    top: 25%;
+    left: 55%;
+}
+
+.node-10 {
+    top: 52%;
+    left: 88%;
+}
+
+/* =========================================
+   NETWORK LINES
+========================================= */
+
+.line {
+    position: absolute;
+
+    height: 1px;
+
+    background: rgba(0, 191, 255, 0.55);
+
+    transform-origin: left center;
+
+    z-index: 2;
+
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.4);
+}
+
+/* Individual connections */
+
+.line-1 {
+    width: 130px;
+    top: 17%;
+    left: 48%;
+    transform: rotate(145deg);
+}
+
+.line-2 {
+    width: 150px;
+    top: 29%;
+    left: 22%;
+    transform: rotate(25deg);
+}
+
+.line-3 {
+    width: 170px;
+    top: 39%;
+    left: 55%;
+    transform: rotate(-5deg);
+}
+
+.line-4 {
+    width: 145px;
+    top: 53%;
+    left: 15%;
+    transform: rotate(25deg);
+}
+
+.line-5 {
+    width: 150px;
+    top: 66%;
+    left: 28%;
+    transform: rotate(35deg);
+}
+
+.line-6 {
+    width: 145px;
+    top: 79%;
+    left: 51%;
+    transform: rotate(-40deg);
+}
+
+.line-7 {
+    width: 150px;
+    top: 64%;
+    left: 56%;
+    transform: rotate(-5deg);
+}
+
+.line-8 {
+    width: 130px;
+    top: 46%;
+    left: 55%;
+    transform: rotate(-55deg);
+}
+
+/* =========================================
+   GLOW ANIMATION
+========================================= */
+
+.ai-circle {
+    animation: aiGlow 4s ease-in-out infinite;
+}
+
+@keyframes aiGlow {
 
     0%,
     100% {
-        transform: translateY(0) rotate(0deg);
+        box-shadow:
+            0 0 25px rgba(0, 174, 255, 0.35),
+            0 0 60px rgba(0, 120, 255, 0.20),
+            inset 0 0 45px rgba(0, 174, 255, 0.12);
     }
 
     50% {
-        transform: translateY(-15px) rotate(4deg);
+        box-shadow:
+            0 0 35px rgba(0, 174, 255, 0.55),
+            0 0 80px rgba(0, 120, 255, 0.30),
+            inset 0 0 55px rgba(0, 174, 255, 0.18);
     }
 }
 
-@keyframes aiWeb {
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
 
-    from {
-        transform: rotate(0deg);
+@media (max-width: 1000px) {
+
+    .ai-network {
+        width: 350px;
+        height: 350px;
+
+        right: 2%;
     }
 
-    to {
-        transform: rotate(360deg);
+    .ai-circle {
+        width: 320px;
+        height: 320px;
+    }
+
+    .ai-circle::before {
+        width: 270px;
+        height: 270px;
+    }
+
+    .ai-circle::after {
+        width: 205px;
+        height: 205px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .ai-network {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        transform: none;
+
+        width: 100%;
+        height: 330px;
+
+        margin: 30px auto 0;
+    }
+
+    .ai-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .ai-circle::before {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ai-circle::after {
+        width: 190px;
+        height: 190px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .ai-network {
+        height: 280px;
+    }
+
+    .ai-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ai-circle::before {
+        width: 210px;
+        height: 210px;
+    }
+
+    .ai-circle::after {
+        width: 160px;
+        height: 160px;
+    }
+
+    .ai-core {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
     }
 }
 
@@ -330,7 +896,7 @@ body {
     background:
         linear-gradient(
             180deg,
-            #191919,
+            #37444f,
             #111111
         );
 }
@@ -455,7 +1021,7 @@ body {
    ========================================= */
 
 .resources {
-    background: #202020;
+    background: #111414;
 }
 
 .resource-list {
@@ -507,7 +1073,7 @@ body {
    ========================================= */
 
 .enrollment {
-    background: #151a16;
+    background: #090c09;
 }
 
 .enrollment-card {
@@ -576,8 +1142,8 @@ body {
     background:
         linear-gradient(
             135deg,
-            #4a4a48,
-            #5a5955
+            #12120b,
+            #15130c
         );
 
     color: #f5f5f4;
@@ -1101,7 +1667,7 @@ a:focus-visible {
 /* Improve image loading appearance */
 
 .course-image {
-    background-color: #e2e8f0;
+    background-color: #F7F7F7;
 }
 
 
